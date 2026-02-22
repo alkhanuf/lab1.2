@@ -1,10 +1,26 @@
-﻿namespace lab12
+﻿//Известны оценки каждого из учеников класса. Посчитать количество пятерок, количество четверок, количество троек и количество двоек.
+
+namespace lab12
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            
+            Console.WriteLine("введите оценки учеников (через пробел)");
+            string grades = Console.ReadLine();
+
+            string[] gradesArr = grades.Split(' ');
+
+            int count5 = 0;
+            int count4 = 0;
+            int count3 = 0;
+            int count2 = 0;
+
+            for (int i = 0; i < gradesArr.Length; i++)
+            {
+                Console.WriteLine(gradesArr[i]);
+            }
         }
     }
 }
