@@ -12,12 +12,12 @@ namespace lab12
 
             string[] gradesArr = grades.Split(' ');
 
-            int[] counts = Logic.CountGrades(gradesArr);
+            Grades counts = Logic.CountGrades(gradesArr);
 
-            Console.WriteLine("пятерок: " + counts[0]);
-            Console.WriteLine("четверок: " + counts[1]);
-            Console.WriteLine("троек: " + counts[2]);
-            Console.WriteLine("двоек: " + counts[3]);
+            Console.WriteLine("пятерок: " + counts.countFive);
+            Console.WriteLine("четверок: " + counts.countFour);
+            Console.WriteLine("троек: " + counts.countThree);
+            Console.WriteLine("двоек: " + counts.countTwo);
         }
     }
 }

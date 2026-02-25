@@ -2,12 +2,9 @@
 
 public class Logic
 {
-    public static int[] CountGrades(string[] grades)
+    public static Grades CountGrades(string[] grades)
     {
-        int count5 = 0;
-        int count4 = 0;
-        int count3 = 0;
-        int count2 = 0;
+        Grades res = new Grades();
 
 
         for (int i = 0; i < grades.Length; i++)
@@ -16,22 +13,23 @@ public class Logic
 
             if (grade == 5)
             {
-                count5++;
+                res.countFive++;
             }
             else if (grade == 4)
             {
-                count4++;
+                res.countFour++;
             }
             else if (grade == 3)
             {
-                count3++;
+                res.countThree++;
             }
             else if (grade == 2)
             {
-                count2++;
+                res.countTwo++;
             }          
         }
 
-        return new int[] { count5, count4, count3, count2 };
+        //не возвращать массив, сделать класс
+        return res;
     }
 }
